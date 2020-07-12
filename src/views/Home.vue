@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="item-point-wrapper">
+      <item-point color="#d6833f" :circle-visible="true"/>
+    </div>
+    <div class="item-point-wrapper">
+      <item-point color="#d6833f" :circle-visible="false"/>
+    </div>
+    <div class="item-point-wrapper">
+      <item-point color="#d9d9d9" :circle-visible="true"/>
+    </div>
+    <div class="item-point-wrapper">
+      <item-point color="#d9d9d9" :circle-visible="false"/>
+    </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ItemPoint from '../components/ItemPoint'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  components: { ItemPoint }
 }
 </script>
+
+<style lang="scss" scoped>
+.item-point-wrapper {
+  margin-bottom: -6px;
+}
+
+</style>
